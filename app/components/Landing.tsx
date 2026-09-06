@@ -6,12 +6,8 @@ import { site, services, stack, approach } from "@/lib/site";
 function Logo() {
   return (
     <span className="inline-flex items-center gap-2">
-      <span
-        className="grid h-8 w-8 place-items-center rounded-lg text-sm font-black text-black"
-        style={{ background: "linear-gradient(135deg,#fb923c,#f43f5e)" }}
-      >
-        SF
-      </span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/logo.png" alt="StackForge Labs logo" className="h-9 w-9" />
       <span className="text-lg font-bold tracking-tight">
         StackForge <span className="text-orange-400">Labs</span>
       </span>
@@ -50,7 +46,9 @@ export default function Landing() {
       </header>
 
       {/* hero */}
-      <section className="mx-auto max-w-6xl px-5 pt-20 pb-16 text-center">
+      <section className="mx-auto max-w-6xl px-5 pt-16 pb-16 text-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo.png" alt="StackForge Labs" className="reveal mx-auto mb-6 h-24 w-24 sm:h-28 sm:w-28" />
         <p className="reveal mb-4 inline-block rounded-full border border-white/15 px-3 py-1 text-xs uppercase tracking-widest text-white/60">
           Software Development Studio
         </p>
