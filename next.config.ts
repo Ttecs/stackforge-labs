@@ -1,14 +1,10 @@
 import type { NextConfig } from "next";
 
-// GitHub Pages project site: https://<user>.github.io/<REPO>.
-// Change REPO if you rename the repository.
-const REPO = "stackforge-labs";
-const isProd = process.env.NODE_ENV === "production";
-
+// Served at the ROOT of the custom apex domain (stackforge-labs.com),
+// so no basePath/assetPrefix is needed. A CNAME file in public/ carries
+// the custom domain into the static export.
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? `/${REPO}` : "",
-  assetPrefix: isProd ? `/${REPO}/` : "",
   images: { unoptimized: true },
   trailingSlash: true,
 };
